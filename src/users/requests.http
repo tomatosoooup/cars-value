@@ -1,0 +1,55 @@
+### Create a new user
+
+POST http://localhost:3000/auth/signup
+content-type: application/json
+
+{
+    "email": "gubinet29@gmail.com",
+    "password": "helloworld"
+
+}
+
+### Sign in user 
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+    "email": "gubinet29@gmail.com",
+    "password": "helloworld"
+
+}
+
+### Find one user by ID
+GET http://localhost:3000/auth/2
+
+### Get all users by email
+GET http://localhost:3000/auth/?email=gubinet26@gmail.com
+
+### Update user
+PATCH http://localhost:3000/auth/2
+content-type: application/json
+
+{
+    "email": "gubinet26@gmail.com"
+}
+
+### Delete user
+DELETE http://localhost:3000/auth/1
+
+### See all users
+GET http://localhost:3000/auth/users
+
+
+# ### Set color to session
+# GET http://localhost:3000/auth/colors/blue
+
+# ### Get colors
+# GET http://localhost:3000/auth/colors
+
+### Find user from session
+GET http://localhost:3000/auth/whoami
+
+### Sign out user
+POST http://localhost:3000/auth/signout
+
+
